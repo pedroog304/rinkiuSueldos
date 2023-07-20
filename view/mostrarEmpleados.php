@@ -6,12 +6,12 @@
     <div class="col-md-12">
     <div class="col-md-4">
       <a id="btn-inicio" href="index.php" class="btn btn-danger btn-block" value="Volver a la pagina principal">Volver a movimientos</a>
-      <a id="btn-insertarEmpleado" href="insertarEmpleado.php" class="btn btn-success btn-block" value="Volver a la pagina principal">Nuevo empleado</a>
+      <a id="btn-insertarEmpleado" href="nuevoEmpleado.php" class="btn btn-success btn-block" value="Volver a la pagina principal">Nuevo empleado</a>
       </div>
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>Numero</th>
+            <th>id</th>
             <th>Nombre</th>
             <th>Rol</th>
             <th>Editar / Eliminar</th>
@@ -27,7 +27,9 @@
             <td><?php echo $row['no_empleado']; ?></td>
             <td><?php echo $row['nombre_empleado']; ?></td>
             <td><?php echo $row['rol_empleado']; ?></td>
-            <td></td>
+            <td>
+              <a href="modificarEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> ">Editar</a>
+            </td>
           </tr>
           <?php } ?>
         </tbody>

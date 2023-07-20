@@ -1,11 +1,4 @@
-<?php
-$conn = mysqli_connect(
-    'localhost',
-    'root',
-    '',
-    'db_rinkiu'
-);
-?>
+<?php include('../model/db.php')?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
