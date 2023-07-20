@@ -1,3 +1,4 @@
+
 <?php include('header.php'); ?>
 
 <main class="container p-4">
@@ -16,12 +17,18 @@
           </tr>
         </thead>
         <tbody id="myTable">
+        <?php
+        $query = "SELECT * FROM empleados";
+          $result_tasks = mysqli_query($conn, $query);    
+
+          while($row = mysqli_fetch_assoc($result_tasks)) { ?>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><?php echo $row['no_empleado']; ?></td>
+            <td><?php echo $row['nombre_empleado']; ?></td>
+            <td><?php echo $row['rol_empleado']; ?></td>
             <td></td>
           </tr>
+          <?php } ?>
         </tbody>
       </table>
   </div>

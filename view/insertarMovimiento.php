@@ -18,8 +18,8 @@
             <textarea name="rol" rows="2" class="form-control" placeholder="rol del empleado" required></textarea>
           </div>
           <div>
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha">
+            <label for="mes">Mes:</label>
+            <input type="month" id="mes" name="mes">
           </div>
           <div>
           <div class="form-group">

@@ -1,3 +1,11 @@
+<?php
+$conn = mysqli_connect(
+    'localhost',
+    'root',
+    '',
+    'db_rinkiu'
+);
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
