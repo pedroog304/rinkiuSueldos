@@ -29,6 +29,7 @@
             <td><?php echo $row['rol_empleado']; ?></td>
             <td>
               <a href="modificarEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> ">Editar</a>
+              <a href="../model/deleteEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> ">Eliminar</a>
             </td>
           </tr>
           <?php } ?>
