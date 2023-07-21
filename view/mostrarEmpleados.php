@@ -5,7 +5,6 @@
   <div class="row">
     <div class="col-md-12">
     <div class="col-md-4">
-      <a id="btn-inicio" href="index.php" class="btn btn-danger btn-block" value="Volver a la pagina principal">Volver a movimientos</a>
       <a id="btn-insertarEmpleado" href="nuevoEmpleado.php" class="btn btn-success btn-block" value="Volver a la pagina principal">Nuevo empleado</a>
       </div>
       <table class="table table-bordered">
@@ -29,14 +28,21 @@
             <td><?php echo $row['nombre_empleado']; ?></td>
             <td><?php echo $row['rol_empleado']; ?></td>
             <td>
-              <a href="modificarEmpleado.php?no_empleado=<?php echo $row['no_empleado']?>">Editar</a>
-              <a href="../model/deleteEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> ">Eliminar</a>
+              <a href="modificarEmpleado.php?no_empleado=<?php echo $row['no_empleado']?>" class="btn btn-warning" style="width:40%">
+              <i class="fas fa-marker"></i>
+            </a>
+              <a href="../model/deleteEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> " class="btn btn-danger" style="width:40%">
+              <i class="far fa-trash-alt"></i>
+              </a>
             </td>
-            <td><a href="nuevoMovimiento.php?no_empleado=<?php echo $row['no_empleado']?> ">Seleccionar</a></td>
+            <td><a href="nuevoMovimiento.php?no_empleado=<?php echo $row['no_empleado']?> "class="btn btn-primary" style="width:40%">Seleccionar</a></td>
           </tr>
           <?php } ?>
         </tbody>
       </table>
+      <div class="container d-flex">
+      <a id="btn-inicio" href="index.php" class="btn btn-primary ml-auto" value="Volver a la pagina principal">Volver a movimientos</a>
+    </div>
   </div>
 </main>
 <?php include('footer.php'); ?>

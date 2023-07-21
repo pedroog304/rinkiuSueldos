@@ -24,14 +24,17 @@ include('../model/insertMovimiento.php')?>
           </div>
           <div>
             <label for="mes">Mes:</label>
-            <input type="month" id="mes" name="mes">
+            <input type="month" id="mes" name="mes" required>
           </div>
           <div>
           <div class="form-group">
             <input type="number" name="entregas" class="form-control" placeholder="Cantidad de entregas" autofocus required>
           </div>
           </div>
-          <input type="submit" name="guardar_movimiento" class="btn btn-success btn-block" value="GUARDAR MOVIMIENTO" required>
+          <a class="btn btn-danger" name="" href="index.php">
+          Cancelar
+        </a>
+          <button type="submit" name="guardar_movimiento" class="btn btn-success" value="GUARDAR MOVIMIENTO" required>GUARDAR MOVIMIENTO</button>
         </form>
       </div>
       </div>

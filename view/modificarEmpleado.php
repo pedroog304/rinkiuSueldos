@@ -9,15 +9,15 @@
       <form action="modificarEmpleado.php?no_empleado=<?php echo $_GET['no_empleado']; ?>" method="POST" class="needs-validation">
         <div class="form-group">
             <p>Número de empleado</p>
-          <input name="no_empleado" type="number" class="form-control" value="<?php echo $numero; ?>"  required>
+          <input name="no_empleado" type="number" class="form-control" value="<?php echo $numero; ?>"  required readonly>
         </div>
         <div class="form-group">
         <p>Nombre del empleado</p>
         <input  type="text" name="nombre_empleado" class="form-control" cols="30" rows="1" value="<?php echo $nombre;?>" required> 
         </div>
-        <div class="form-group">
+        <div class="form-group" required>
         <p>Rol del empleado (actualmente <?php echo $rol?> )</p>
-        <input type="radio" name="rol_empleado" value="chofer">
+        <input type="radio" name="rol_empleado" value="chofer" required>
       Chofer
     </label>
     <label>
@@ -29,7 +29,10 @@
       Auxiliar
     </label>
     </div>
-        <button class="btn-success" name="update_empleado">
+    <a class="btn btn-danger" name="" href="mostrarEmpleados.php">
+          Cancelar
+        </a>
+        <button class="btn btn-success" name="update_empleado">
           Actualizar
         </button>
       </form>

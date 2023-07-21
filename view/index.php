@@ -3,7 +3,7 @@
 <main class="container p-4">
   <div class="row">
     <div class="col-md-12">
-      <div class="col-md-6">
+      <div class="col-md-4">
       <a id="btn-registrar-movimiento" href="mostrarEmpleados.php" class="btn btn-success btn-block" value="Ver empleados">Nuevo movimiento</a>
       <a id="btn-ver-empleados" href="mostrarEmpleados.php" class="btn btn-warning btn-block" value="">Visualizar lista de empleados</a>
       </div>
@@ -22,6 +22,7 @@
             <th>sueldo bruto</th>
             <th>sueldo neto</th>
             <th>Fecha</th>
+            <th>Editar/Eliminar</th>
           </tr>
         </thead>
         <tbody id="myTable">
@@ -42,8 +43,12 @@
             <td><?php echo $row['sueldobruto']; ?></td>
             <td><?php echo $row['sueldoneto']; ?></td>
             <td><?php echo $row['fecha']; ?></td>
-            <td><a href="modificarMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>">Editar</a>
-            <a href="../model/deleteMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>">Eliminar</a>
+            <td><a href="modificarMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>" class="btn btn-warning" style="width:40%">
+            <i class="fas fa-marker"></i>
+          </a>
+            <a href="../model/deleteMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>" class="btn btn-danger" style="width:40%">
+            <i class="far fa-trash-alt"></i>
+          </a>
           
           </td>
           </tr>

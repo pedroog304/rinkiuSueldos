@@ -3,7 +3,7 @@ include('db.php');
 if  (isset($_GET['no_empleado']) && isset($_GET['fecha'])) {
   $id = $_GET['no_empleado'];
   $fecha =$_GET['fecha'];
-  $query = "SELECT e.no_empleado, e.nombre_empleado,e.rol_empleado, m.fecha, (m.pagoxentregas) as entregas FROM movimientos m inner join empleados e on e.no_empleado = m.no_empleado 
+  $query = "SELECT e.no_empleado, e.nombre_empleado,e.rol_empleado, m.fecha, (m.pagoxentregas)*.2 as entregas FROM movimientos m inner join empleados e on e.no_empleado = m.no_empleado 
   WHERE m.fecha='$fecha'
   group by m.no_empleado";
   $result = mysqli_query($conn, $query);

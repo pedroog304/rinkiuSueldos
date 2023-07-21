@@ -29,7 +29,10 @@
       Auxiliar
     </label>
           </div>
-          <input type="submit" name="guardar_empleado" class="btn btn-success btn-block" value="GUARDAR EMPLEADO" required>
+          <a class="btn btn-danger" name="" href="mostrarEmpleados.php">
+          Cancelar
+        </a>
+          <button type="submit" name="guardar_empleado" class="btn btn-success" value="GUARDAR EMPLEADO" required>GUARDAR EMPLEADO</button>
         </form>
       </div>
       </div>
