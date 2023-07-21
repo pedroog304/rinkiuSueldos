@@ -20,7 +20,7 @@ include('../model/insertMovimiento.php')?>
           </div>
           <!--------------------------ROL DEL EMPLEADO------------------------>
           <div class="form-group">
-            <input name="rol" rows="2" class="form-control" placeholder="rol del empleado" value="<?php echo $numero?>" readonly>
+            <input name="rol" rows="2" class="form-control" placeholder="rol del empleado" value="<?php echo $rol?>" readonly>
           </div>
           <div>
             <label for="mes">Mes:</label>
