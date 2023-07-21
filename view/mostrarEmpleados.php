@@ -15,6 +15,7 @@
             <th>Nombre</th>
             <th>Rol</th>
             <th>Editar / Eliminar</th>
+            <th>Movimiento nuevo</th>
           </tr>
         </thead>
         <tbody id="myTable">
@@ -31,6 +32,7 @@
               <a href="modificarEmpleado.php?no_empleado=<?php echo $row['no_empleado']?>">Editar</a>
               <a href="../model/deleteEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> ">Eliminar</a>
             </td>
+            <td><a href="nuevoMovimiento.php?no_empleado=<?php echo $row['no_empleado']?> ">Seleccionar</a></td>
           </tr>
           <?php } ?>
         </tbody>

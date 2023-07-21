@@ -1,4 +1,6 @@
-<?php include('header.php'); ?>
+<?php include('header.php'); 
+include('../model/insertMovimiento.php')?>
+
       <!-- REGISTRAR NUEVO MOVIMIENTO -->
       <div class="container p-4">
   <div class="row">
@@ -9,16 +11,16 @@
           <!--CAMPO NUMERO DE EMPLEADO ------------------------------------->
           <div class="form-group" method="">
             <label>Número de empleado</label>
-            <input type="number" name="no_empleado" class="form-control" placeholder="No empleado" autofocus required value="">
+            <input type="number" name="no_empleado" class="form-control" placeholder="No empleado" autofocus value="<?php echo $numero?>" readonly>
     <!-----------------------NOMBRE EMPLEADO--------------------------------------- -->
           </div>
           <div class="form-group">
           <label>Nombre de empleado</label>
-            <input type="text" name="nombre" rows="2" class="form-control" placeholder="Nombre empleado" required value="">
+            <input type="text" name="nombre" rows="2" class="form-control" placeholder="Nombre empleado" value="<?php echo $nombre?>" readonly>
           </div>
           <!--------------------------ROL DEL EMPLEADO------------------------>
           <div class="form-group">
-            <textarea name="rol" rows="2" class="form-control" placeholder="rol del empleado" value="" required></textarea>
+            <input name="rol" rows="2" class="form-control" placeholder="rol del empleado" value="<?php echo $numero?>" readonly>
           </div>
           <div>
             <label for="mes">Mes:</label>

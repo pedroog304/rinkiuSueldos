@@ -18,4 +18,16 @@ if (isset($_POST['guardar_movimiento'])) {
 
 }
 
+if  (isset($_GET['no_empleado'])) {
+  $id = $_GET['no_empleado'];
+  $query = "SELECT * FROM empleados WHERE no_empleado=$id";
+  $result = mysqli_query($conn, $query);
+  if (mysqli_num_rows($result) == 1) {
+    $row = mysqli_fetch_array($result);
+    $numero = $row['no_empleado'];
+    $nombre = $row['nombre_empleado'];
+    $rol = $row['rol_empleado'];
+  }
+}
+
 ?>

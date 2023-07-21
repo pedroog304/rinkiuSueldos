@@ -1,5 +1,6 @@
 <?php include('header.php'); ?>
 
+
       <!-- REGISTRAR NUEVO EMPLEADO -->
       <div class="container p-4">
   <div class="row">
