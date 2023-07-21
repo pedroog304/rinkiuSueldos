@@ -42,7 +42,10 @@
             <td><?php echo $row['sueldobruto']; ?></td>
             <td><?php echo $row['sueldoneto']; ?></td>
             <td><?php echo $row['fecha']; ?></td>
-            <td><a href="modificarMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>">Editar</a></td>
+            <td><a href="modificarMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>">Editar</a>
+            <a href="../model/deleteMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>">Eliminar</a>
+          
+          </td>
           </tr>
           <?php } ?>
         </tbody>
