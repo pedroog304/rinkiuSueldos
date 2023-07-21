@@ -6,7 +6,7 @@
     <div class="col-md-4 mx-auto">
     <h5>REGISTRAR NUEVO MOVIMIENTO</h5>
       <div class="card card-body">
-        <form action="../model/insertMovimiento.php" method="POST" class="needs-validation">
+        <form action="../model/updateMovimiento.php?no_empleado=<?php echo $_GET['no_empleado']; ?>" method="POST" class="needs-validation">
           <!--CAMPO NUMERO DE EMPLEADO ------------------------------------->
           <div class="form-group" method="">
             <label>Número de empleado</label>
@@ -22,7 +22,8 @@
             <input name="rol" rows="2" class="form-control" placeholder="rol del empleado" value="<?php echo $rol;?>" required readonly></input>
           </div>
           <div>
-            <label for="mes">Mes:</label>
+            <label for="mes">Mes actual del movimiento: </label>
+            <input name="mes_actual" onlyread value="<?php echo $fecha ?>"></input>
             <input type="month" id="mes" name="mes" value="<?php echo $fecha; ?>">
           </div>
           <div>
@@ -30,7 +31,7 @@
             <input type="number" name="entregas" class="form-control" placeholder="Cantidad de entregas" autofocus required value="<?php echo $entregas; ?>">
           </div>
           </div>
-          <input type="submit" name="guardar_movimiento" class="btn btn-success btn-block" value="ACTUALIZAR MOVIMIENTO" required>
+          <input type="submit" name="actualizar_movimiento" class="btn btn-success btn-block" value="ACTUALIZAR MOVIMIENTO" required>
         </form>
       </div>
       </div>

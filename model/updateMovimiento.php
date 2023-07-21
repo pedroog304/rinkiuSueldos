@@ -16,3 +16,21 @@ if  (isset($_GET['no_empleado']) && isset($_GET['fecha'])) {
     $fecha= substr($fecha, 0, -3);
   }
 }
+
+if (isset($_POST['actualizar_movimiento'])) {
+    $numero = $_GET['no_empleado'];
+    $mesactual =$_POST['mes_actual'];
+    $fechaactual = $mesactual . '-01';
+    $nombre= $_POST['nombre'];
+    $rol = $_POST['rol'];
+    $mes=$_POST['mes'];
+    $mesnuevo = $mes . '-01';
+    $entregas=$_POST['entregas'];
+  
+    $query = "UPDATE movimientos m set m.pagoxentregas = ($entregas*5), m.fecha='$mesnuevo' WHERE m.no_empleado=$numero and m.fecha = '$fechaactual';";
+    mysqli_query($conn, $query);
+    $_SESSION['message'] = 'employee Updated Successfully';
+    $_SESSION['message_type'] = 'warning';
+    header('Location: ../view/index.php');
+  }
+  ?>
