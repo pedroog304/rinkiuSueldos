@@ -21,6 +21,7 @@
             <th>vales</th>
             <th>sueldo bruto</th>
             <th>sueldo neto</th>
+            <th>Fecha</th>
           </tr>
         </thead>
         <tbody id="myTable">
@@ -40,6 +41,8 @@
             <td><?php echo $row['vales']; ?></td>
             <td><?php echo $row['sueldobruto']; ?></td>
             <td><?php echo $row['sueldoneto']; ?></td>
+            <td><?php echo $row['fecha']; ?></td>
+            <td><a href="modificarMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>">Editar</a></td>
           </tr>
           <?php } ?>
         </tbody>
