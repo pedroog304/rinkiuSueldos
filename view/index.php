@@ -4,7 +4,8 @@
   <div class="row">
     <div class="col-md-12">
       <div class="col-md-6">
-      <a id="btn-ver-empleados" href="mostrarEmpleados.php" class="btn btn-success btn-block" value="Ver empleados">Visualizar lista de empleados</a>
+      <a id="btn-registrar-movimiento" href="nuevoMovimiento.php" class="btn btn-success btn-block" value="Ver empleados">Nuevo movimiento</a>
+      <a id="btn-ver-empleados" href="mostrarEmpleados.php" class="btn btn-warning btn-block" value="">Visualizar lista de empleados</a>
       </div>
     <div class="col-md-12">
       <table class="table table-bordered">

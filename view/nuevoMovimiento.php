@@ -1,21 +1,24 @@
 <?php include('header.php'); ?>
-
       <!-- REGISTRAR NUEVO MOVIMIENTO -->
       <div class="container p-4">
   <div class="row">
     <div class="col-md-4 mx-auto">
     <h5>REGISTRAR NUEVO MOVIMIENTO</h5>
       <div class="card card-body">
-        
-        <form action="" method="" class="needs-validation">
-          <div class="form-group">
-            <input type="number" name="numero" class="form-control" placeholder="No empleado" autofocus required>
+        <form action="../model/insertMovimiento.php" method="POST" class="needs-validation">
+          <!--CAMPO NUMERO DE EMPLEADO ------------------------------------->
+          <div class="form-group" method="">
+            <label>Número de empleado</label>
+            <input type="number" name="no_empleado" class="form-control" placeholder="No empleado" autofocus required value="">
+    <!-----------------------NOMBRE EMPLEADO--------------------------------------- -->
           </div>
           <div class="form-group">
-            <input type="text" name="nombre" rows="2" class="form-control" placeholder="Nombre empleado" required>
+          <label>Nombre de empleado</label>
+            <input type="text" name="nombre" rows="2" class="form-control" placeholder="Nombre empleado" required value="">
           </div>
+          <!--------------------------ROL DEL EMPLEADO------------------------>
           <div class="form-group">
-            <textarea name="rol" rows="2" class="form-control" placeholder="rol del empleado" required></textarea>
+            <textarea name="rol" rows="2" class="form-control" placeholder="rol del empleado" value="" required></textarea>
           </div>
           <div>
             <label for="mes">Mes:</label>
