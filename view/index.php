@@ -3,10 +3,16 @@
 <main class="container p-4">
   <div class="row">
     <div class="col-md-12">
-      <div class="col-md-4">
-      <a id="btn-registrar-movimiento" href="mostrarEmpleados.php" class="btn btn-success btn-block" value="Ver empleados">Nuevo movimiento</a>
-      <a id="btn-ver-empleados" href="mostrarEmpleados.php" class="btn btn-warning btn-block" value="">Visualizar lista de empleados</a>
+      <div class="col-md-3">
+      <a id="btn-ver-empleados" href="mostrarEmpleados.php" class="btn btn-success btn-block" value="">Visualizar lista de empleados</a>
       </div>
+     <!----BARRA DE BUSQUEDA POR MES------>
+      <div class="barrabusqueda">
+        <form action="" method ="GET" class="">
+             <input class="form-control" name="busqueda" type="month" placeholder="" style="width:30%; display:inline-block;"> 
+             <button name="consultar_mes" id="" type="submit" class="btn btn-primary" href="#" role="button">Buscar</button>
+         </form>
+        </div>
     <div class="col-md-12">
       <table class="table table-bordered">
         <thead>
@@ -27,7 +33,14 @@
         </thead>
         <tbody id="myTable">
         <?php
+        $busqueda ="";
+        if(isset($_GET['consultar_mes'])){
+          $busqueda = $_GET['busqueda'];
+          $mes= $busqueda.'-01';
+          $query = "call sp_mostrar_movimientos2('$mes')";
+        }else{
         $query = "call sp_mostrar_movimientos";
+        }
           $result_tasks = mysqli_query($conn, $query);    
 
           while($row = mysqli_fetch_assoc($result_tasks)) { ?>
