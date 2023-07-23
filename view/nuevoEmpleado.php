@@ -1,4 +1,4 @@
-<?php include('header.php'); ?>
+<?php include('header.php'); include('../controller/verificarEmpleadoValidos.php');?>
 
 
       <!-- REGISTRAR NUEVO EMPLEADO -->
@@ -10,7 +10,14 @@
         
         <form action="../controller/insertEmpleado.php" method="POST" class="needs-validation">
           <div class="form-group">
-            <input type="number" name="numero_empleado" class="form-control" placeholder="No empleado" autofocus required>
+            <select type="number" name="numero_empleado" class="form-control" placeholder="No empleado" autofocus required>
+            <?php
+            // Generar las opciones en el input select
+            foreach ($empleados_no_registrados as $no_empleado) {
+                echo "<option value='$no_empleado'>$no_empleado</option>";
+            }
+            ?>
+            </select>
           </div>
           <div class="form-group">
             <input type="text" name="nombre_empleado" rows="2" class="form-control" placeholder="Nombre empleado" required>
