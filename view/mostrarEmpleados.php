@@ -31,7 +31,7 @@
               <a href="modificarEmpleado.php?no_empleado=<?php echo $row['no_empleado']?>" class="btn btn-warning" style="width:40%">
               <i class="fas fa-marker"></i>
             </a>
-              <a href="../model/deleteEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> " class="btn btn-danger" style="width:40%">
+              <a href="../controller/deleteEmpleado.php?no_empleado=<?php echo $row['no_empleado']?> " class="btn btn-danger" style="width:40%">
               <i class="far fa-trash-alt"></i>
               </a>
             </td>

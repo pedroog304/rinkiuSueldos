@@ -7,7 +7,7 @@ if(isset($_GET['no_empleado'])&& isset($_GET['fecha'])) {
   $fecha = $_GET['fecha'];
 
 
-  $query = "DELETE from movimientos WHERE no_empleado = $numero and fecha = '$fecha';";
+  $query = "call sp_borrar_movimiento($numero, '$fecha');";
   $result = mysqli_query($conn, $query);
   if(!$result) {
     die("Query Failed.");

@@ -17,7 +17,7 @@
           </div>
           <div class="form-group">
           <label>
-      <input type="radio" name="rol" value="chofer">
+      <input type="radio" required name="rol" value="chofer">
       Chofer
     </label>
     <label>

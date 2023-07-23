@@ -59,7 +59,7 @@
             <td><a href="modificarMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>" class="btn btn-warning" style="width:40%">
             <i class="fas fa-marker"></i>
           </a>
-            <a href="../model/deleteMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>" class="btn btn-danger" style="width:40%">
+            <a href="../controller/deleteMovimiento.php?no_empleado=<?php echo $row['no_empleado']?>&fecha=<?php echo $row['fecha']?>" class="btn btn-danger" style="width:40%">
             <i class="far fa-trash-alt"></i>
           </a>
           
