@@ -8,7 +8,7 @@
     <h5>REGISTRAR NUEVO EMPLEADO</h5>
       <div class="card card-body">
         
-        <form action="../model/insertEmpleado.php" method="POST" class="needs-validation">
+        <form action="../controller/insertEmpleado.php" method="POST" class="needs-validation">
           <div class="form-group">
             <input type="number" name="numero_empleado" class="form-control" placeholder="No empleado" autofocus required>
           </div>

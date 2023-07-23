@@ -1,12 +1,12 @@
 <?php include('header.php'); ?>
-<?php include('../model/updateMovimiento.php')?>
+<?php include('../controller/updateMovimiento.php')?>
       <!-- REGISTRAR NUEVO MOVIMIENTO -->
       <div class="container p-4">
   <div class="row">
     <div class="col-md-4 mx-auto">
     <h5>MODIFICAR MOVIMIENTO</h5>
       <div class="card card-body">
-        <form action="../model/updateMovimiento.php?no_empleado=<?php echo $_GET['no_empleado']; ?>" method="POST" class="needs-validation">
+        <form action="../controller/updateMovimiento.php?no_empleado=<?php echo $_GET['no_empleado']; ?>" method="POST" class="needs-validation">
           <!--CAMPO NUMERO DE EMPLEADO ------------------------------------->
           <div class="form-group" method="">
             <label>Número de empleado</label>

@@ -1,6 +1,6 @@
 <?php
 
-include("db.php");
+include("../model/db.php");
 
 if(isset($_GET['no_empleado'])&& isset($_GET['fecha'])) {
   $numero = $_GET['no_empleado'];

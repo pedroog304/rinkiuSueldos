@@ -1,6 +1,6 @@
 <?php
 
-include('db.php');
+include('../model/db.php');
 echo "Hola";
 if (isset($_POST['guardar_empleado'])) {
   $numero = $_POST['numero_empleado'];

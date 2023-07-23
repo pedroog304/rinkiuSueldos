@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include('../model/db.php');
 if  (isset($_GET['no_empleado'])) {
   $id = $_GET['no_empleado'];
   $query = "SELECT * FROM empleados WHERE no_empleado=$id";

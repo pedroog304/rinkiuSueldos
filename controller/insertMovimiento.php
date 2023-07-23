@@ -1,6 +1,6 @@
 <?php
 
-include('db.php');
+include('../model/db.php');
 if (isset($_POST['guardar_movimiento'])) {
   $numero = $_POST['no_empleado'];
   $mes = $_POST['mes'];

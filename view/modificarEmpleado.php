@@ -1,5 +1,5 @@
 <?php include('header.php'); ?>
-<?php include('../model/updateEmpleado.php')?>
+<?php include('../controller/updateEmpleado.php')?>
 
 <div class="container p-4">
   <div class="row">

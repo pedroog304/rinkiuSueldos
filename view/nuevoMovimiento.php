@@ -1,5 +1,5 @@
 <?php include('header.php'); 
-include('../model/insertMovimiento.php')?>
+include('../controller/insertMovimiento.php')?>
 
       <!-- REGISTRAR NUEVO MOVIMIENTO -->
       <div class="container p-4">
@@ -7,7 +7,7 @@ include('../model/insertMovimiento.php')?>
     <div class="col-md-4 mx-auto">
     <h5>REGISTRAR NUEVO MOVIMIENTO</h5>
       <div class="card card-body">
-        <form action="../model/insertMovimiento.php" method="POST" class="needs-validation">
+        <form action="../controller/insertMovimiento.php" method="POST" class="needs-validation">
           <!--CAMPO NUMERO DE EMPLEADO ------------------------------------->
           <div class="form-group" method="">
             <label>Número de empleado</label>
