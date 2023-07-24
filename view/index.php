@@ -25,7 +25,7 @@
             <th>pago por bonos</th>
             <th>retenciones</th>
             <th>vales</th>
-            <th>sueldo bruto</th>
+            <th>sueldo base</th>
             <th>sueldo neto</th>
             <th>Fecha</th>
             <th>Editar/Eliminar</th>
