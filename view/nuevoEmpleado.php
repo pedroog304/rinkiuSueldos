@@ -20,10 +20,12 @@
             </select>
           </div>
           <div class="form-group">
+            <!-------CAMPO NOMBRE---------->
             <input type="text" name="nombre_empleado" rows="2" class="form-control" placeholder="Nombre empleado" required>
           </div>
           <div class="form-group">
           <label>
+            <!-------CAMPO ROL---------->
       <input type="radio" required name="rol" value="chofer">
       Chofer
     </label>
@@ -36,9 +38,11 @@
       Auxiliar
     </label>
           </div>
+          <!-------CANCELAR--------->
           <a class="btn btn-danger" name="" href="mostrarEmpleados.php">
           Cancelar
         </a>
+        <!-------GUARDAR------->
           <button type="submit" name="guardar_empleado" class="btn btn-success" value="GUARDAR EMPLEADO" required>GUARDAR EMPLEADO</button>
         </form>
       </div>
